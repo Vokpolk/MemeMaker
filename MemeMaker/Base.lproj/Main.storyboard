@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides dynamicTypePreference="3"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-1b-1i5">
+                                <rect key="frame" x="62.666666666666657" y="209.66666666666666" width="249.99999999999997" height="392.66666666666674"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Y0N-y2-4J9">
+                                        <rect key="frame" x="59.333333333333343" y="0.0" width="131" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="topSegmentValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="CCk-9y-PZQ"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZV-K6-cj4">
+                                        <rect key="frame" x="104.33333333333334" y="41" width="41.333333333333343" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIG29" translatesAutoresizingMaskIntoConstraints="NO" id="Vz7-g3-TfW">
+                                        <rect key="frame" x="0.0" y="71.333333333333343" width="250" height="250.00000000000003"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="1ao-uj-HEm"/>
+                                            <constraint firstAttribute="height" constant="250" id="v1C-Lh-ukf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1Y-0v-mhA">
+                                        <rect key="frame" x="104.33333333333334" y="331.33333333333337" width="41.333333333333343" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yqT-QM-gb7">
+                                        <rect key="frame" x="59.333333333333343" y="361.66666666666674" width="131" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="bottomSegmentValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="r3P-bU-M1A"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ob0-1b-1i5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="39T-4O-ZF9"/>
+                            <constraint firstItem="Ob0-1b-1i5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uyd-Pn-Tg1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomCaptionSegmentControl" destination="yqT-QM-gb7" id="fd6-n7-d4O"/>
+                        <outlet property="bottomLabel" destination="n1Y-0v-mhA" id="OaR-My-25A"/>
+                        <outlet property="mainImageView" destination="Vz7-g3-TfW" id="I6k-4p-uY1"/>
+                        <outlet property="topCaptionSegmentControl" destination="Y0N-y2-4J9" id="Met-r8-wvp"/>
+                        <outlet property="topLabel" destination="0ZV-K6-cj4" id="MLa-xH-vcf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MIG29" width="1000" height="667"/>
+    </resources>
+</document>
